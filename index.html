@@ -3,18 +3,55 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/vite.svg">
+    <title>Interactive Rating Component</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
-    <main
-        class="w-full min-h-screen bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-        <h1 class="font-mono font-bold text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            Vite + Typescript + TailwindCSS + GitHub Pages
-        </h1>
+    <main class="w-full min-h-screen flex items-center justify-center bg-c_Very_Dark_Blue px-6">
+        <div id="rate-page" class="flex flex-col rounded-3xl p-6 bg-c_Dark_Blue md:w-[21rem]">
+            <div class="flex justify-center items-center rounded-full size-10 bg-white bg-opacity-5 mb-6">
+                <img src="/images/icon-star.svg" alt="star icon" />
+            </div>
+            <div class="flex flex-col gap-3">
+                <h1 class="text-white font-overpass text-2xl font-bold">How did we do?</h1>
+                <p class="text-c_Light_Grey text-xs font-medium leading-5">
+                    Please let us know how we did with your support request.
+                    All feedback is appreciated to help us improve our offering!
+                </p>
+            </div>
+            <div class="grid grid-cols-5 items-center gap-4 py-6">
+                <button id="rate-1"
+                    class="rate-btn rounded-full bg-[#323840] size-10 hover:text-c_Dark_Blue transition hover:bg-c_Orange font-bold text-sm font-overpass aspect-square text-c_Light_Grey">1</button>
+                <button id="rate-2"
+                    class="rate-btn rounded-full bg-[#323840] size-10 hover:text-c_Dark_Blue transition hover:bg-c_Orange font-bold text-sm font-overpass aspect-square text-c_Light_Grey">2</button>
+                <button id="rate-3"
+                    class="rate-btn rounded-full bg-[#323840] size-10 hover:text-c_Dark_Blue transition hover:bg-c_Orange font-bold text-sm font-overpass aspect-square text-c_Light_Grey">3</button>
+                <button id="rate-4"
+                    class="rate-btn rounded-full bg-[#323840] size-10 hover:text-c_Dark_Blue transition hover:bg-c_Orange font-bold text-sm font-overpass aspect-square text-c_Light_Grey">4</button>
+                <button id="rate-5"
+                    class="rate-btn rounded-full bg-[#323840] size-10 hover:text-c_Dark_Blue transition hover:bg-c_Orange font-bold text-sm font-overpass aspect-square text-c_Light_Grey">5</button>
+            </div>
+            <button id="submit"
+                class="rounded-full bg-c_Orange transition font-overpass text-black hover:bg-white py-2 font-black tracking-widest text-sm">SUBMIT</button>
+        </div>
+
+        <div id="finish-page" style="display: none;" class="flex flex-col items-center rounded-3xl p-6 bg-c_Dark_Blue md:w-[21rem]">
+            <div class="flex justify-center items-center py-2">
+                <img src="/images/illustration-thank-you.svg" alt="thank you illustration" />
+            </div>
+            <p
+                class="w-fit text-center font-overpass mt-4 mb-2 text-orange-300 text-xs rounded-full py-[6px] font-semibold px-5 bg-white bg-opacity-5">
+                You selected <span id="my-rating"></span> out of 5</p>
+            <h3 class="text-white font-black text-xl py-4">Thank you!</h3>
+            <p class="text-xs text-c_Light_Grey font-overpass text-center leading-5 px-2">
+                We appreciate you taking the time to give a rating.
+                If you ever need more support, don’t hesitate to get
+                in touch!
+            </p>
+        </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
 </body>
