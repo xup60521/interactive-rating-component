@@ -67,7 +67,7 @@ Vite's built in Typescript support helps a lot, so I didn't need to check the do
 
 #### Interactivity
 
-Since I didn't use a framework, I must manully the interactivity. When clicking a rate button, for example, 4, other button should return to its default style while the `4` button should change to its active state. I looped over these element. Whenever a button is clicked, it triggers a function `onRate`
+When clicking a rate button, for example, 4, other button should return to its default style while the `4` button should change to its active state. I looped over these element. Whenever a button is clicked, it triggers a function `onRate`
 
 ```
 const rateBtns = ["rate-1", "rate-2", "rate-3", "rate-4", "rate-5"].map((d) =&gt;
